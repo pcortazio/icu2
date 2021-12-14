@@ -43,7 +43,7 @@ Hooks.once("init", () => {
 });
 
 //// NOTES: I don't think it should be updateToken as it seems that gets called every time you even place a token.
-Hooks.on(`updateToken`, (scene, data, update, options) => {
+Hooks.on("updateToken", (scene, data, update, options) => {
     if (game.settings.get("icu5e", "autoRunOnTokenMove").valueOf()){
         if (update.x || update.y) { // If the x/y is updated, they moved.
             if (data.disposition != -1){ // If token is not hostile
